@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            노지딸기 생태농업 가이드북
+longtitle:        노지딸기 생태농업 가이드북
+author:           GiPyeong Lee
+email:            gipyeong.lee@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  별앗간 농부들의 지식 나눔터
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://byeolyat-farmers.github.io'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -58,9 +58,9 @@ collections:
     permalink: /:collection/:path/
 
 ordered_collections:
-  - posts
   - pages
-  - others
+  - posts
+  # - others
 
 page_width: 800px
 
@@ -72,3 +72,8 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+
+
+
+shring:
+  instagram:
