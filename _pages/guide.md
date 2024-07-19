@@ -4,13 +4,11 @@ author: GiPyeong Lee
 date: 2024-07-14
 category: guide
 layout: monthly-guide
+excerpt: "이 페이지는 월별 가이드를 제공합니다."
 ---
-## 1월
 
-{% include monthly_plants.html month=1 %}
-<!-- {% for month in (1..12) %}
+{% for month in (3..10) %}
 ## {{ month }}월
 
-{% include monthly_plants.html month=month %}
-
-{% endfor %} -->
+{%- include monthly_plants.html month=month -%}
+{% endfor %}
