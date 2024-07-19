@@ -1,0 +1,98 @@
+<div style="background-image: url('{{ include.plant.image_url }}'); background-size: cover; background-position: center; color: #fff; font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border-radius: 10px; position: relative; overflow: hidden;">
+    <div style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; position: relative; z-index: 2;">
+      <div style="text-align: center; font-size: 36px; font-weight: bold; margin-bottom: -10px;">{{ include.plant.name }}</div>
+      <div style="text-align: center; font-size: 16px; margin-bottom: 20px; color: #ccc; font-style: italic;">{{ include.plant.scientific_name }}</div>
+  
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="display:flex; flex-direction: column; flex:1">
+          <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">재배 정보</div>
+          <div style="display:flex; justify-content: space-between; flex-direction: row;">
+            <div style="text-align: center; flex: 1; padding: 10px;">
+                <div style="font-size: 24px; font-weight: bold;">
+                    <i class="fas fa-vial"></i> {{ include.plant.pH_range }}
+                </div>
+                <div class="ph-bar-container">
+                    <div class="ph-bar ph-percent-{{ include.plant.pH_range_percent }}" style="width: {{ include.plant.pH_range_percent }}%;"></div>
+                    <div style="position: absolute; top: 15px; left: 0; font-size: 10px; color: #fff;">낮음</div>
+                    <div style="position: absolute; top: 15px; right: 0; font-size: 10px; color: #fff;">높음</div>
+                </div>
+                <div style="font-size: 12px; color: #ccc; margin-top: 5px;">pH</div>
+            </div>
+            <div style="text-align: center; flex: 1; padding: 10px;">
+              <div style="font-size: 24px; font-weight: bold;">
+                <i class="fas fa-tint"></i> {{ include.plant.water_requirements_percent }}
+              </div>
+              <div style="background: #ccc; border-radius: 5px; height: 10px; position: relative; margin-top: 5px;">
+                <div style="background: #00ccff; width: {{ include.plant.water_requirements_percent }}%; height: 100%; border-radius: 5px;"></div>
+                <div style="position: absolute; top: 15px; left: 0; font-size: 10px; color: #fff;">적음</div>
+                <div style="position: absolute; top: 15px; right: 0; font-size: 10px; color: #fff;">많음</div>
+              </div>
+              <div style="font-size: 12px; color: #ccc; margin-top: 5px;">수분</div>
+            </div>
+            <div style="text-align: center; flex: 1; padding: 10px;">
+              <div style="font-size: 24px; font-weight: bold;">
+                <i class="fas fa-sun"></i> {{ include.plant.sunlight_requirements_percent }}
+              </div>
+              <div style="background: #ccc; border-radius: 5px; height: 10px; position: relative; margin-top: 5px;">
+                <div style="background: #ffcc00; width: {{ include.plant.sunlight_requirements_percent }}%; height: 100%; border-radius: 5px;"></div>
+                <div style="position: absolute; top: 15px; left: 0; font-size: 10px; color: #fff;">적음</div>
+                <div style="position: absolute; top: 15px; right: 0; font-size: 10px; color: #fff;">많음</div>
+              </div>
+              <div style="font-size: 12px; color: #ccc; margin-top: 5px;">일조량</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div style="margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">생육정보</div>
+        <div><i class="fas fa-temperature-low"></i>  최적 온도: {{ include.plant.optimal_temperature.low }}°C - {{ include.plant.optimal_temperature.high }}°C</div>
+        <div style="margin: 20px 0 25px 0;">
+          <div>발아 기간:</div>
+          <div style="background: #ccc; border-radius: 5px; height: 10px; position: relative;">
+            <div style="background: #ff6600; width: {{ include.plant.germination_period_percent }}%; height: 100%; border-radius: 5px;"></div>
+            <div style="position: absolute; top: 10px; left: 0; font-size: 10px; color: #fff;">짧음</div>
+            <div style="position: absolute; top: 10px; right: 0; font-size: 10px; color: #fff;">김</div>
+          </div>
+        </div>
+        <div style="margin: 10px 0 25px 0;">
+          <div>생장 속도:</div>
+          <div style="background: #ccc; border-radius: 5px; height: 10px; position: relative;">
+            <div style="background: #009900; width: {{ include.plant.growth_rate_percent }}%; height: 100%; border-radius: 5px;"></div>
+            <div style="position: absolute; top: 10px; left: 0; font-size: 10px; color: #fff;">느림</div>
+            <div style="position: absolute; top: 10px; right: 0; font-size: 10px; color: #fff;">빠름</div>
+          </div>
+        </div>
+        <div style="margin: 10px 0;">
+          <div>재배 시기:</div>
+          <div>{{ include.plant.planting_time.months | join: "월, " }}월</div>
+        </div>
+      </div>
+  
+      <div style="margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">병충해 관리</div>
+        <div><i class="fas fa-bug"></i> 주요 해충: {{ include.plant.common_pests | join: ", " }}</div>
+        <div><i class="fas fa-shield-alt"></i> 방제 방법: {{ include.plant.pest_control_methods | join: ", " }}</div>
+      </div>
+  
+      <div style="margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">동반 식물</div>
+        <div><i class="fas fa-leaf"></i> 좋은 관계: {{ include.plant.companion_plants | join: ", " }}</div>
+        <div><i class="fas fa-times-circle"></i> 나쁜 관계: {{ include.plant.incompatible_plants | join: ", " }}</div>
+      </div>
+  
+      <div style="margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">특별 관리 팁</div>
+        <div><i class="fas fa-info-circle"></i> {{ include.plant.special_care_tips }}</div>
+      </div>
+  
+      <div style="margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px;">
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">지역 정보</div>
+        <div><i class="fas fa-map-marker-alt"></i> {{ include.plant.regional_info }}</div>
+      </div>
+  
+      <div>
+        <a href="{{ include.plant.reference_link }}" style="color: #fff; text-decoration: underline;">더 자세한 정보 ></a>
+      </div>
+    </div>
+  </div>

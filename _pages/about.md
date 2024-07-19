@@ -2,7 +2,7 @@
 title: 농부 소개
 author: GiPyeong Lee
 date: 2022-02-04
-category: Jekyll
+category: about
 layout: post
 ---
 ![노지딸기](/assets/images/profile.jpg)

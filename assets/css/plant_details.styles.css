@@ -1,0 +1,56 @@
+.ph-bar-container {
+    background: #ccc;
+    border-radius: 5px;
+    height: 10px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.ph-bar {
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* pH 퍼센트 값에 따른 색상 */
+.ph-percent-0 { background: #ff0000; }
+.ph-percent-1, .ph-percent-2, .ph-percent-3, .ph-percent-4, .ph-percent-5, .ph-percent-6, .ph-percent-7, .ph-percent-8, .ph-percent-9 { background: #ff0000; }
+.ph-percent-10, .ph-percent-11, .ph-percent-12, .ph-percent-13, .ph-percent-14, .ph-percent-15, .ph-percent-16, .ph-percent-17, .ph-percent-18, .ph-percent-19 { background: #ff6600; }
+.ph-percent-20, .ph-percent-21, .ph-percent-22, .ph-percent-23, .ph-percent-24, .ph-percent-25, .ph-percent-26, .ph-percent-27, .ph-percent-28, .ph-percent-29 { background: #ff6600; }
+.ph-percent-30, .ph-percent-31, .ph-percent-32, .ph-percent-33, .ph-percent-34, .ph-percent-35, .ph-percent-36, .ph-percent-37, .ph-percent-38, .ph-percent-39 { background: #ffff00; }
+.ph-percent-40, .ph-percent-41, .ph-percent-42, .ph-percent-43, .ph-percent-44, .ph-percent-45, .ph-percent-46, .ph-percent-47, .ph-percent-48, .ph-percent-49 { background: #ffff00; }
+.ph-percent-50, .ph-percent-51, .ph-percent-52, .ph-percent-53, .ph-percent-54, .ph-percent-55, .ph-percent-56, .ph-percent-57, .ph-percent-58, .ph-percent-59 { background: #00ff00; }
+.ph-percent-60, .ph-percent-61, .ph-percent-62, .ph-percent-63, .ph-percent-64, .ph-percent-65, .ph-percent-66, .ph-percent-67, .ph-percent-68, .ph-percent-69 { background: #00ff00; }
+.ph-percent-70, .ph-percent-71, .ph-percent-72, .ph-percent-73, .ph-percent-74, .ph-percent-75, .ph-percent-76, .ph-percent-77, .ph-percent-78, .ph-percent-79 { background: #00ffff; }
+.ph-percent-80, .ph-percent-81, .ph-percent-82, .ph-percent-83, .ph-percent-84, .ph-percent-85, .ph-percent-86, .ph-percent-87, .ph-percent-88, .ph-percent-89 { background: #00ffff; }
+.ph-percent-90, .ph-percent-91, .ph-percent-92, .ph-percent-93, .ph-percent-94, .ph-percent-95, .ph-percent-96, .ph-percent-97, .ph-percent-98, .ph-percent-99 { background: #0000ff; }
+.ph-percent-100 { background: #6600cc; }
+
+
+.temp-bar-container {
+    position: relative;
+    height: 30px;
+    background: linear-gradient(to right, #ccc, #00ff00, #ccc);
+    border-radius: 15px;
+    margin: 10px 0;
+}
+.temp-bar {
+position: absolute;
+height: 100%;
+background: rgba(0, 255, 0, 0.5);
+border-radius: 15px;
+}
+.temp-label {
+position: absolute;
+font-size: 10px;
+top: 5px;
+color: #000;
+}
+.temp-label.low { left: 0; }
+.temp-label.optimal { left: 50%; transform: translateX(-50%); }
+.temp-label.high { right: 0; }
+.temp-range {
+position: absolute;
+height: 100%;
+background: #66cc33;
+border-radius: 15px;
+}

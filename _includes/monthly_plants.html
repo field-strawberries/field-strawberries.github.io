@@ -1,0 +1,10 @@
+{% assign month_plants = site.data.plants | where_exp: "plant", "plant.planting_time.months contains include.month" %}
+{% for plant in month_plants %}
+
+### {{ plant.name }}
+
+{% include plant_details.html plant=plant %}
+
+---
+
+{% endfor %}
